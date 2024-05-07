@@ -24,31 +24,34 @@ export default function Form(){
                 return
             } 
             setImc(null)
+            setTextButton("Calcular IMC")
             setMessage("Preencha o Peso e Altura")
         }
     return(
         <View>
+            <View>
+                <Text>Height: </Text>
+                <TextInput 
+                    placeholder="Ex. 1.75"
+                    keyboardType="numeric"
+                    value={height}
+                    onChangeText={(text) => setHeight(text)}
+                />
+                <Text>Weight: </Text>
+                <TextInput
+                    placeholder="Ex. 75.86"
+                    keyboardType="numeric"
+                    value={weight}
+                    onChangeText={(text) => setWeight(text)}
+                /> 
 
-
-        <View>
-            <Text>Height: </Text>
-            <TextInput 
-                placeholder="Ex. 1.75"
-                keyboardType="numeric"
-            />
-            <Text>Weight: </Text>
-            <TextInput
-                placeholder="75.865"
-                keyboardType="numeric"
-            /> 
-
-            <Button
-            onPress={() => validationImc}
-            title="Calcular IMC"
-            color="#61dafb"
-            />
-
-        </View>
+                <Button
+                onPress={() => validationImc()}
+                title={textButton}
+                color="#61dafb"
+                />      
+            </View>
+            <ResultImc messageResultImc={message} resultImc={imc}/>
         </View>
     );
 }
