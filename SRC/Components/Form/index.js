@@ -35,14 +35,14 @@ export default function Form(){
                     placeholder="Ex. 1.75"
                     keyboardType="numeric"
                     value={height}
-                    onChangeText={(text) => setHeight(text)}
+                    onChangeText={setHeight}
                 />
                 <Text>Weight: </Text>
                 <TextInput
                     placeholder="Ex. 75.86"
                     keyboardType="numeric"
                     value={weight}
-                    onChangeText={(text) => setWeight(text)}
+                    onChangeText={setWeight}
                 /> 
 
                 <Button
