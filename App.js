@@ -1,14 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Title from './SRC/Components/Title';
+import Form from './SRC/Components/Form';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Pedro Henrique e Kauan Siqueira</Text>
       <Title/>
+      <Form/>
       <StatusBar style="auto" />
     </View>
+    
   );
 }
 
