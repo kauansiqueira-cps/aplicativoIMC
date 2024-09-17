@@ -5,9 +5,7 @@ import styles from "./style";
 export default function Title(){
     return(
         <View style={styles.BoxTitle}>
-            <Text style={styles.texTitle}>Pedro Henrique e Kauan Siqueira</Text>
-            <Text>13/08/2024...</Text>
-          
+            <Text style={styles.texTitle}>Kauan Guilherme e Pedro Henrique</Text>
         </View>
     );
 }
